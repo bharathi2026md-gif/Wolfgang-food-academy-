@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Wolfgang Food Academy — practical food, biryani, Chinese fast food, cloud kitchen and restaurant business training. Book your training via WhatsApp.">
+<meta name="theme-color" content="#171717">
+<title>Wolfgang Food Academy | Learn. Cook. Build.</title>
+<style>
+:root{--ink:#171717;--muted:#686868;--paper:#faf9f6;--gold:#d7a84b;--line:#e9e5dc;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Arial,Helvetica,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(250,249,246,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-weight:900;letter-spacing:.16em;font-size:19px}.brand small{display:block;font-size:9px;letter-spacing:.28em;color:#8b6a2c;margin-top:-3px}
+nav{display:flex;gap:26px;align-items:center;font-size:13px;font-weight:700;color:#444}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border-radius:5px;background:var(--gold);color:#171717;font-weight:800;font-size:13px;border:0;cursor:pointer;transition:.2s}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.04)}.btn.dark{background:var(--ink);color:#fff}.btn.outline{background:transparent;border:1px solid #777;color:#fff}
+.hero{background:linear-gradient(110deg,rgba(10,10,10,.92),rgba(10,10,10,.68)),url('https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1800&q=85') center/cover;color:white;padding:105px 0 100px}
+.eyebrow{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:800}
+h1{font-size:clamp(42px,7vw,76px);line-height:1.02;letter-spacing:-.045em;margin:18px 0;max-width:760px}
+.hero p{max-width:560px;color:#e0dfdc;font-size:17px;margin:0 0 30px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero-note{margin-top:55px;display:flex;gap:32px;flex-wrap:wrap;color:#ddd;font-size:12px}.hero-note strong{display:block;color:white;font-size:16px}
+section{padding:82px 0}.section-head{max-width:650px;margin-bottom:34px}.section-head h2{font-size:clamp(30px,4vw,44px);line-height:1.12;letter-spacing:-.035em;margin:10px 0}.section-head p{color:var(--muted);margin:0}
+.courses{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.course{background:white;border:1px solid var(--line);padding:25px 22px;border-radius:8px;min-height:245px;display:flex;flex-direction:column}
+.course .num{font-size:12px;color:#a17a35;font-weight:900;letter-spacing:.15em}.course h3{font-size:21px;line-height:1.2;margin:22px 0 10px}.course p{font-size:13px;color:var(--muted);margin:0 0 20px}.course a{margin-top:auto;font-size:12px;font-weight:800;color:#876323}
+.band{background:#1b1b1b;color:white}.band-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}.band h2{font-size:clamp(30px,4vw,46px);line-height:1.1;margin:12px 0}.band p{color:#c6c6c6}.mode-list{display:grid;gap:12px}.mode{padding:19px;border:1px solid #484848;border-radius:7px;display:flex;gap:15px;align-items:center}.mode b{display:block}.mode span{font-size:12px;color:#c4c4c4}.mode-icon{width:42px;height:42px;border-radius:50%;background:#302a1e;color:var(--gold);display:grid;place-items:center;font-size:19px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.step{border-top:2px solid var(--gold);padding-top:18px}.step strong{font-size:12px;color:#a17a35;letter-spacing:.12em}.step h3{margin:10px 0 6px}.step p{font-size:13px;color:var(--muted);margin:0}
+.booking{background:#f0ede6}.booking-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:55px;align-items:start}.booking h2{font-size:clamp(32px,4vw,46px);line-height:1.1;margin:10px 0}.booking-copy{color:var(--muted)}form{background:white;padding:28px;border:1px solid var(--line);border-radius:8px;display:grid;gap:14px}
+label{font-size:12px;font-weight:800;display:block;margin-bottom:6px}input,select,textarea{width:100%;padding:13px 12px;border:1px solid #ddd8ce;border-radius:4px;font:inherit;font-size:14px;background:#fff;color:#222}input:focus,select:focus,textarea:focus{outline:2px solid #e7c77f;border-color:#c99c42}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}.fine{font-size:11px;color:#777;margin:0}
+footer{background:#141414;color:white;padding:35px 0}.foot{display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap}.foot p{color:#aaa;font-size:12px;margin:5px 0 0}.wa-float{position:fixed;right:20px;bottom:20px;z-index:30;background:#1fbf65;color:#fff;border-radius:50px;padding:13px 18px;font-weight:800;font-size:13px;box-shadow:0 8px 25px #0003}
+@media(max-width:850px){.courses{grid-template-columns:repeat(2,1fr)}.band-grid,.booking-grid{grid-template-columns:1fr;gap:30px}nav{gap:13px}.nav .btn{padding:10px 13px}}
+@media(max-width:560px){.nav{height:68px}.brand{font-size:16px}nav a:not(.btn){display:none}.hero{padding:78px 0}.hero-note{gap:20px}section{padding:62px 0}.courses,.steps{grid-template-columns:1fr}.course{min-height:205px}.form-row{grid-template-columns:1fr}form{padding:20px}.wa-float{right:12px;bottom:12px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home">WOLFGANG<small>FOOD ACADEMY</small></a>
+    <nav>
+      <a href="#courses">Courses</a><a href="#training">Training</a><a href="#about">About</a>
+      <a class="btn" href="#booking">Book Training</a>
+    </nav>
+  </div>
+</header>
+<main>
+<section class="hero" id="home">
+  <div class="wrap">
+    <div class="eyebrow">Wolfgang Food Academy</div>
+    <h1>Learn the craft.<br><span style="color:#e2b95f">Build your future.</span></h1>
+    <p>Practical food training for aspiring chefs and food entrepreneurs. Learn cooking skills, understand kitchen operations and take your next step in the food business.</p>
+    <div class="hero-actions">
+      <a class="btn" href="#courses">Explore Courses</a>
+      <a class="btn outline" href="#booking">Book Your Training</a>
+    </div>
+    <div class="hero-note">
+      <div><strong>4</strong> Training programmes</div>
+      <div><strong>Online + Offline</strong> Learning modes</div>
+      <div><strong>Practical</strong> Skill-focused learning</div>
+    </div>
+  </div>
+</section>
+
+<section id="courses">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">What you can learn</div>
+      <h2>Training designed for the real food world.</h2>
+      <p>Choose a programme that matches your goal — from mastering popular dishes to understanding how to run a food business.</p>
+    </div>
+    <div class="courses">
+      <article class="course"><div class="num">01 / COOKING</div><h3>Biryani Making</h3><p>Build your biryani-making skills, understand preparation and improve consistency in the kitchen.</p><a href="#booking" data-course="Biryani Making">ENQUIRE ABOUT THIS COURSE →</a></article>
+      <article class="course"><div class="num">02 / COOKING</div><h3>Chinese Fast Food</h3><p>Learn the fundamentals of popular Chinese-style fast-food preparation and kitchen workflow.</p><a href="#booking" data-course="Chinese Fast Food">ENQUIRE ABOUT THIS COURSE →</a></article>
+      <article class="course"><div class="num">03 / BUSINESS</div><h3>Cloud Kitchen Training</h3><p>Explore the essentials of planning and operating a delivery-focused kitchen.</p><a href="#booking" data-course="Cloud Kitchen Training">ENQUIRE ABOUT THIS COURSE →</a></article>
+      <article class="course"><div class="num">04 / BUSINESS</div><h3>Restaurant Business Training</h3><p>Understand the key areas involved in setting up and managing a restaurant business.</p><a href="#booking" data-course="Restaurant Business Training">ENQUIRE ABOUT THIS COURSE →</a></article>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="training">
+  <div class="wrap band-grid">
+    <div>
+      <div class="eyebrow">Flexible learning</div>
+      <h2>Learn your way.<br>Train with purpose.</h2>
+      <p>Wolfgang Food Academy offers both offline and online training options. Contact the academy to check course availability, schedule, duration and fees.</p>
+      <a class="btn" href="#booking">Check Training Availability</a>
+    </div>
+    <div class="mode-list">
+      <div class="mode"><div class="mode-icon">✦</div><div><b>Offline Training</b><span>In-person learning. Ask us about the available venue and batches.</span></div></div>
+      <div class="mode"><div class="mode-icon">◎</div><div><b>Online Training</b><span>Learn remotely. Ask us about the online format and schedule.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">About the academy</div>
+      <h2>Skills that move ideas into action.</h2>
+      <p>Our focus is food education for people who want to strengthen their cooking skills or explore opportunities in the food industry. Choose a course, tell us your learning preference and our team will help with the next steps.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><strong>STEP 01</strong><h3>Choose a course</h3><p>Select the training programme that fits your interest or business goal.</p></div>
+      <div class="step"><strong>STEP 02</strong><h3>Send an enquiry</h3><p>Share your details and preferred online or offline learning mode.</p></div>
+      <div class="step"><strong>STEP 03</strong><h3>Confirm your booking</h3><p>Our team will respond on WhatsApp with availability and booking details.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="booking" id="booking">
+  <div class="wrap booking-grid">
+    <div>
+      <div class="eyebrow">Start learning</div>
+      <h2>Book your training.</h2>
+      <p class="booking-copy">Fill in the details below. Your enquiry will open in WhatsApp, ready for you to send to Wolfgang Food Academy.</p>
+      <p><b>WhatsApp:</b> +91 87546 00233</p>
+      <p class="fine">Submitting this form opens WhatsApp. Your booking is confirmed only after the academy responds.</p>
+    </div>
+    <form id="bookingForm">
+      <div class="form-row">
+        <div><label for="name">Your name *</label><input id="name" name="name" required placeholder="Enter your name"></div>
+        <div><label for="phone">Your phone number *</label><input id="phone" name="phone" required inputmode="tel" placeholder="Enter phone number"></div>
+      </div>
+      <div><label for="course">Choose your course *</label>
+        <select id="course" name="course" required>
+          <option value="">Select a course</option>
+          <option>Biryani Making</option><option>Chinese Fast Food</option><option>Cloud Kitchen Training</option><option>Restaurant Business Training</option>
+        </select>
+      </div>
+      <div><label for="mode">Preferred training mode *</label>
+        <select id="mode" name="mode" required><option value="">Select mode</option><option>Offline</option><option>Online</option><option>Either / Need guidance</option></select>
+      </div>
+      <div><label for="message">Message (optional)</label><textarea id="message" name="message" rows="3" placeholder="Tell us your preferred dates or questions"></textarea></div>
+      <button class="btn dark" type="submit">Continue to WhatsApp →</button>
+      <p class="fine">No payment is collected on this website.</p>
+    </form>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap foot">
+    <div><div class="brand">WOLFGANG<small>FOOD ACADEMY</small></div><p>Learn. Cook. Build.</p></div>
+    <div><p>Training enquiries & bookings</p><b>+91 87546 00233</b></div>
+    <p>© <span id="year"></span> Wolfgang Food Academy. All rights reserved.</p>
+  </div>
+</footer>
+<a class="wa-float" href="https://wa.me/918754600233?text=Hello%20Wolfgang%20Food%20Academy%2C%20I%20would%20like%20to%20know%20about%20your%20training%20courses." target="_blank" rel="noopener">WhatsApp Us</a>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+document.querySelectorAll('[data-course]').forEach(link => link.addEventListener('click', () => {
+  document.getElementById('course').value = link.dataset.course;
+}));
+document.getElementById('bookingForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const name = document.getElementById('name').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const course = document.getElementById('course').value;
+  const mode = document.getElementById('mode').value;
+  const message = document.getElementById('message').value.trim();
+  const text = `Hello Wolfgang Food Academy,%0A%0AI would like to enquire about training.%0A%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0ACourse: ${encodeURIComponent(course)}%0APreferred mode: ${encodeURIComponent(mode)}%0AMessage: ${encodeURIComponent(message || 'No additional message')}`;
+  window.open('https://wa.me/918754600233?text=' + text, '_blank', 'noopener');
+});
+</script>
+</body>
+</html>
